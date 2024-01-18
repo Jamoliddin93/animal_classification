@@ -2,11 +2,18 @@ import streamlit as st
 from fastai.vision.all import *
 from fastai.learner import CastToTensor
 import plotly.express as px
-from pathlib import Path
+import pathlib
 import platform
 
+
 plt = platform.system()
-if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
+if plt == 'Linux':
+    st.text('You are on a Linux system.')
+else:
+    st.text('You are on a non-Linux system (probably Windows or macOS).')
+
+# Continue with the rest of your code without modifying pathlib
+
 
 st.title('Jonzotlarni klassifikatsiya qiluvchi model')
 st.text('Ushbu model 4 turdagi jonzotlarni o\'z ichiga oladi\n 1.Yirtqichlar 2.Hashorotlar  3.Reptilyalar 4. Qushlar')
