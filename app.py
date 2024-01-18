@@ -5,15 +5,8 @@ import plotly.express as px
 import pathlib
 import platform
 
-
 plt = platform.system()
-if plt == 'Linux':
-    st.text('You are on a Linux system.')
-else:
-    st.text('You are on a non-Linux system (probably Windows or macOS).')
-
-# Continue with the rest of your code without modifying pathlib
-
+if plt=='Linux':pathlib.WindowsPath = pathlib.PosixPath
 
 st.title('Jonzotlarni klassifikatsiya qiluvchi model')
 st.text('Ushbu model 4 turdagi jonzotlarni o\'z ichiga oladi\n 1.Yirtqichlar 2.Hashorotlar  3.Reptilyalar 4. Qushlar')
