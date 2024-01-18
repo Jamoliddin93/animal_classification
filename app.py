@@ -5,8 +5,8 @@ import plotly.express as px
 import pathlib
 import platform
 
-plt = platform.system()
-if plt == 'Windows': pathlib.PosixPath = pathlib.WindowsPath
+temp = pathlib.PosixPath
+pathlib.PosixPath = pathlib.WindowsPath
 
 st.title('Jonzotlarni klassifikatsiya qiluvchi model')
 st.text('Ushbu model 4 turdagi jonzotlarni o\'z ichiga oladi\n 1.Yirtqichlar 2.Hashorotlar  3.Reptilyalar 4. Qushlar')
@@ -26,4 +26,4 @@ if file:
     st.info(f'Ehtimollik: {probs[pred_id]*100:.1f}%')
 
     fig = px.bar(x=probs*100, y=model.dls.vocab)
-    st.plotly_chart(fig) 
+    st.plotly_chart(fig)
