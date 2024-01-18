@@ -6,7 +6,7 @@ import pathlib
 import platform
 
 plt = platform.system()
-if plt == 'Windows': pathlib.PosixPath = pathlib.WindowsPath
+if plt == 'Windows': pathlib.PosixPath = pathlib.WindowsPathh
 
 st.title('Jonzotlarni klassifikatsiya qiluvchi model')
 st.text('Ushbu model 4 turdagi jonzotlarni o\'z ichiga oladi\n 1.Yirtqichlar 2.Hashorotlar  3.Reptilyalar 4. Qushlar')
